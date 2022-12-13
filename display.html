@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="css/display.css">
+
+</head>
+<body>
+<form>
+	<center>
+		<table >
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+                
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td><input type="text" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th>Phone Number</th>
+					<td><input type="number" name="phone number" id="phn"></td>
+				</tr>
+                <tr>
+					<th>Gender</th>
+					<td><input type="text" name="Gender" id="gender"></td>
+				</tr>
+                <br>
+                <br>
+                <th>Qualifications</th>
+                <tr>
+					<th>SchoolName</th>
+					<td><input type="text" name="SchoolName" id="school"></td>
+				</tr>
+                <tr>
+					<th>Grade</th>
+					<td><input type="number" name="grade" id="grade"></td>
+				</tr>
+                <tr>
+					<th>CollegeName</th>
+					<td><input type="text" name="college" id="college"></td>
+				</tr>
+                <tr>
+					<th>Grades</th>
+					<td><input type="number" name="grade" id="grades"></td>
+				</tr>
+
+                
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+                
+			</tbody>
+		</table>
+
+		<table id="show">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Phone NUmber</th>
+                    <th>Gender</th><br>
+                    <th>SchoolName</th>
+                    <th>Grade</th>
+                    <th>College Name</th>
+                    <th>Grades</th>
+
+				</tr>
+			</thead>
+		</table>
+	</center>
+    </form>
+	
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+        var list5 = [];
+        var list6 = [];
+        var list7 = [];
+        var list8 = [];
+        var list9 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+            
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("fname").value;
+			list2[x] = document.getElementById("lname").value;
+			list3[x] = document.getElementById("email").value;
+			list4[x] = document.getElementById("phn").value;
+            list5[x] = document.getElementById("gender").value;
+            list6[x] = document.getElementById("school").value;
+            list7[x] = document.getElementById("grade").value;
+            list8[x] = document.getElementById("college").value;
+            list9[x] = document.getElementById("grades").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+            var cel6 = NewRow.insertCell(5);
+            var cel7 = NewRow.insertCell(6);
+            var cel8 = NewRow.insertCell(7);
+            var cel9 = NewRow.insertCell(8);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+            cel5.innerHTML = list5[x];
+            cel6.innerHTML = list6[x];
+            cel7.innerHTML = list7[x];
+            cel8.innerHTML = list8[x];
+            cel9.innerHTML = list9[x];
+
+			n++;
+			x++;
+		}
+
+	</script>
+    <center>
+    <button type="button" onclick="document.getElementById('resume').style.display='block'">show</button>
+    <button type="button" onclick="document.getElementById('resume').style.display='none'">hide</button>
+    </center>
+         
+         
+<div class="container" id="resume">
+    
+<center>
+    
+    <h1 id="head">My Resume</h1>
+    </center>
+    <img src="C:\Users\91939\Desktop\charlie.jpg" height=10% align="right">
+    <div class="pd">
+     <h1>T.jyothi </h1>
+    <p>onetown, kurnool|
+    telugujyothi0204@gmail.com</p>
+    </div>
+    <hr>
+    <div class="obj">
+    <h2>
+    <u >CARRIER OBJECTIVE </u>
+    </h2>
+    <p>to succeed ............
+    .........
+    ..........</p>
+    </div>
+    <hr width="px">
+    <div class="education">
+    <h2><u>ACADEMIC QUALIFICATION </u>
+    </h2>
+    <table border=5 width=1000>
+    <tr>
+    <th>QUALIFICATION </th>
+    <th>BOARD /UNIVERSITY </th>
+    <th>SCHOOL /COLLEGE </th>
+    <th>YEAR OF PASSING </th>
+    <th>MARKS</th>
+    </tr>
+    <tr>
+    <td>BSC electronics</td>
+    <td>Ap</td>
+    <td>St.joesphs degree College </td>
+    <td>2023</td>
+    <td>8.00</td>
+    </tr>
+    <tr>
+    <td>Intermediate</td>
+    <td>Andhrapradesh board of intermediate</td>
+    <td>St.joesphs junior College </td>
+    <td>2020</td>
+    <td>8.00</td>
+    </tr>
+    <td>10th</td>
+    <td>Andhrapradesh board of secondary education</td>
+    <th>Bhashyam high school  </td>
+    <td>2018</td>
+    <td>10.0</td>
+    </tr>
+    </table>
+    </div>
+    <hr>
+    <div class="skills">
+    <h2><u>STRENGTH </u></h2>
+    <ul>
+    <li>Good communication skills
+    <li>self confidence 
+    <li>problem solving skills </li>
+    </ul>
+    </div>
+    <hr>
+    <div class="personal">
+    <h2><u>PERSONAL DETAILS </u>
+    </h2>
+    <ul>
+    <li>father's name:xxxx</li>
+    <li>mother's name:xx</li>
+    <li>nationality :</li>
+    </ul>
+    </div>
+    <hr>
+    <div class="declaration ">
+    <h2>Declaration </h2>
+    <p>Ideclare myself all the data given above is true</p>
+    <p>place: kurnool </p>
+    <p>date:4/02/2022</p>
+    </div>
+</body>
+</html>
